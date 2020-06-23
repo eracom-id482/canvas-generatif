@@ -54,3 +54,10 @@ document.getElementById("myCanvas").addEventListener("mouseup", function () {
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+// Télécharger
+
+downloadLink.addEventListener('click', function() {
+  var img = canvas.toDataURL('image/png');
+  downloadLink.href = img;
+});
